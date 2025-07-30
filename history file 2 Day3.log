@@ -1,0 +1,477 @@
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ vi sum.c
+gcc sum.c && ./a.out
+vi filecmd
+cat filecmd
+cat sum.c
+gcc sum.c
+./a.out
+gcc sum.c && ./a.out
+
+zsh: suspended  vi sum.c
+cc1: fatal error: sum.c: No such file or directory
+compilation terminated.
+
+zsh: suspended  vi filecmd
+cat: filecmd: No such file or directory
+cat: sum.c: No such file or directory
+cc1: fatal error: sum.c: No such file or directory
+compilation terminated.
+zsh: no such file or directory: ./a.out
+cc1: fatal error: sum.c: No such file or directory
+compilation terminated.
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ fg                                     
+[2]  - continued  vi filecmd
+
+zsh: suspended  vi filecmd
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ fg
+[2]  - continued  vi filecmd
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ cat test.c            
+#include <stdio.h>
+int main() {
+    printf("Hello from test.c\n");
+    return 0;
+}
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ fg
+[1]  - continued  vi sum.c
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ cat test.c
+#include <stdio.h>
+int main() {
+    printf("Hello from test.c\n");
+    return 0;
+}
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ gcc test.c && ./a.out
+
+Hello from test.c
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ gcc test.c -o test && ./test
+
+Hello from test.c
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ ls
+more filecmd
+nano filecmd
+more filecmd
+less filecmd
+head filecmd
+head -n 5 filecmd
+tail filecmd
+tail +5 filecmd
+nano sample.txt
+cat sample.txt
+cut -c 1-3 sample.txt
+cut -c 4-10 sample.txt
+cat sample.txt
+cut -d ':' -f2 sample.txt
+cut -d ':' -f2,3 sample.txt
+50000  a.out     employees.txt  f1  filecmd  sample.txt  sum.c  test.c
+a.log  day3.log  example.txt    f2  s1.txt   sed_test    test
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+
+
+
+zsh: suspended  less filecmd
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+
+
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1:J
+2:A
+3:B
+4:C
+ohn:28:
+lice:25
+ob:30:4
+arol:32
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+John
+Alice
+Bob
+Carol
+John:28
+Alice:25
+Bob:30
+Carol:32
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ ls
+cat demo
+nano f1
+nano f2
+cat fi
+cat f1
+cat f2
+paste f1 f2
+paste -d ':' f1 f2
+paste -s f1 f2
+cat sample.txt
+sort sample.txt
+sort sample.txt -r
+sort -t ':' -k2 sample.txt
+sort -t ':' -k3 sample.txt
+sort -t ':' -k4 sample.txt
+sort -t ':' -k3 sample.txt -r
+cat sample.txt
+tr ':' '|' < sample.txt
+cat sample.txt
+50000  a.out     employees.txt  f1  filecmd  sample.txt  sum.c  test.c
+a.log  day3.log  example.txt    f2  s1.txt   sed_test    test
+cat: demo: No such file or directory
+cat: fi: No such file or directory
+John
+Alice
+Bob
+Carol
+50000
+55000
+40000
+60000
+John	50000
+Alice	55000
+Bob	40000
+Carol	60000
+John:50000
+Alice:55000
+Bob:40000
+Carol:60000
+John	Alice	Bob	Carol
+50000	55000	40000	60000
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+4:Carol:32:60000
+3:Bob:30:40000
+2:Alice:25:55000
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1:John:28:50000
+2:Alice:25:55000
+1:John:28:50000
+3:Bob:30:40000
+4:Carol:32:60000
+3:Bob:30:40000
+1:John:28:50000
+2:Alice:25:55000
+4:Carol:32:60000
+4:Carol:32:60000
+3:Bob:30:40000
+1:John:28:50000
+2:Alice:25:55000
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1|John|28|50000
+2|Alice|25|55000
+3|Bob|30|40000
+4|Carol|32|60000
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ tr ':' '|' < sample.txt > s1.txt
+ls
+cat s1.txt
+tr ':0' '|$' < sample.txt
+cat sample.txt
+tr -s '0' < sample.txt
+cat sample.txt
+tr -d '0' < sample.txt
+nano example.txt
+cat example.txt
+uniq example.txt
+nano example.txt
+cat example.txt
+uniq example.txt
+zsh: permission denied: s1.txt
+50000  a.out     employees.txt  f1  filecmd  sample.txt  sum.c  test.c
+a.log  day3.log  example.txt    f2  s1.txt   sed_test    test
+1|John|28|50000
+2|Alice|25|55000
+3|Bob|30|40000
+4|Carol|32|60000
+1|John|28|5$$$$
+2|Alice|25|55$$$
+3|Bob|3$|4$$$$
+4|Carol|32|6$$$$
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1:John:28:50
+2:Alice:25:550
+3:Bob:30:40
+4:Carol:32:60
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1:John:28:5
+2:Alice:25:55
+3:Bob:3:4
+4:Carol:32:6
+apple
+apple
+banana
+banana
+carrot
+apple
+banana
+carrot
+apple
+apple
+banana
+banana
+carrot
+apple
+banana
+carrot
+                                                                                
+┌──(ravi7pspk㉿rc75)-[~/Desktop/a]
+└─$ >....                                                                       
+awk '{print $0}' employees.txt
+awk '{print $1, $3}' employees.txt
+awk $3>50000 '{print $1, $3}' employees.txt
+awk '$3 > 50000 {print $1, $3}' employees.txt
+awk 'BEGIN {print "Name:, Salary: "} {print $1, $3}' employees.txt
+awk 'BEGIN {print "Name Salary"} {print $1, $3}' employees.txt
+awk 'BEGIN {print "Name Age Salary"} {print $1, $2, $3}' employees.txt
+awk '{total+= $3} END {print "Total Salary=", total}' employees.txt
+awk '{print $0}' employees.txt
+awk '{print NR, $1}' employees.txt
+awk '{print NR, $0}' employees.txt
+awk '/Alice/' employees.txt
+awk '$2 < 30 {print $1, $2}' employees.txt
+awk '{printf "Name: %s, Age: %d, Salary: %d\n", $1, $2, $3}' employees.txt
+awk 'END {print "Total employees= ", NR}' employees.txt
+ls -l
+ls -l s1.txt
+chmod u+x s1.txt
+ls -l s1.txt
+chmod o-r s1.txt
+ls -l s1.txt
+chmod 462 s1.txt
+ls -l s1.txt
+1:John:28:50000
+2:Alice:25:55000
+3:Bob:30:40000
+4:Carol:32:60000
+1|John|28|50000
+2|Alice|25|55000
+3|Bob|30|40000
+4|Carol|32|60000
+sample.txt s1.txt differ: byte 2, line 1
+1,4c1,4
+< 1:John:28:50000
+< 2:Alice:25:55000
+< 3:Bob:30:40000
+< 4:Carol:32:60000
+---
+> 1|John|28|50000
+> 2|Alice|25|55000
+> 3|Bob|30|40000
+> 4|Carol|32|60000
+50000  a.out     employees.txt  f1  filecmd  sample.txt  sum.c  test.c
+a.log  day3.log  example.txt    f2  s1.txt   sed_test    test
+#include <stdio.h>
+int main() {
+    printf("Hello from test.c\n");
+    return 0;
+}
+int main() {
+int main() {
+    printf("Hello from test.c\n");
+    return 0;
+#include <stdio.h>
+int main() {
+    printf("Hello from test.c\n");
+    return 0;
+}
+int main() {
+Hi world!
+This is a simple test.
+Hi world!
+This is a simple test.
+Hi world!
+This is a simple test.
+Hi world!
+This is a simple test.
+Hi world$
+This is a simple test.
+Hi world!
+This is a simple test.
+Hi world!
+Hi world!
+Welcome to sed
+This is a simple test.
+Hi world!
+John 28 50000
+Alice 25 55000
+Bob 30 40000
+Carol 32 60000
+John 28 50000
+Alice 25 55000
+Bob 30 40000
+Carol 32 60000
+John 50000
+Alice 55000
+Bob 40000
+Carol 60000
+Alice 55000
+Carol 60000
+Name:, Salary: 
+John 50000
+Alice 55000
+Bob 40000
+Carol 60000
+Name Salary
+John 50000
+Alice 55000
+Bob 40000
+Carol 60000
+Name Age Salary
+John 28 50000
+Alice 25 55000
+Bob 30 40000
+Carol 32 60000
+Total Salary= 205000
+John 28 50000
+Alice 25 55000
+Bob 30 40000
+Carol 32 60000
+1 John
+2 Alice
+3 Bob
+4 Carol
+1 John 28 50000
+2 Alice 25 55000
+3 Bob 30 40000
+4 Carol 32 60000
+Alice 25 55000
+John 28
+Alice 25
+Name: John, Age: 28, Salary: 50000
+Name: Alice, Age: 25, Salary: 55000
+Name: Bob, Age: 30, Salary: 40000
+Name: Carol, Age: 32, Salary: 60000
+Total employees=  4
+total 296
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     45 Jul 30 20:46 50000
+-rw-rw-r-- 1 ravi7pspk ravi7pspk 159744 Jul 30 20:46 a.log
+-rwxrwxr-x 1 ravi7pspk ravi7pspk  15952 Jul 30 20:44 a.out
+-rw-rw-r-- 1 ravi7pspk ravi7pspk  57344 Jul 30 20:46 day3.log
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     57 Jul 30 20:34 employees.txt
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     33 Jul 30 20:33 example.txt
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     21 Jul 30 20:33 f1
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     24 Jul 30 20:33 f2
+-rw-rw-r-- 1 ravi7pspk ravi7pspk    180 Jul 30 20:42 filecmd
+-r--rw--w- 1 ravi7pspk ravi7pspk     65 Jul 30 20:33 s1.txt
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     65 Jul 30 20:33 sample.txt
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     33 Jul 30 20:46 sed_test
+-rw-rw-r-- 1 ravi7pspk ravi7pspk    179 Jul 30 20:43 sum.c
+-rwxrwxr-x 1 ravi7pspk ravi7pspk  15952 Jul 30 20:44 test
+-rw-rw-r-- 1 ravi7pspk ravi7pspk     83 Jul 30 20:33 test.c
+-r--rw--w- 1 ravi7pspk ravi7pspk 65 Jul 30 20:33 s1.txt
+-r-xrw--w- 1 ravi7pspk ravi7pspk 65 Jul 30 20:33 s1.txt
+-r-xrw--w- 1 ravi7pspk ravi7pspk 65 Jul 30 20:33 s1.txt
+-r--rw--w- 1 ravi7pspk ravi7pspk 65 Jul 30 20:33 s1.txt
+ history
+  555  echo $HISTTIMEFORMAT\n
+  556  export HISTTIMEFORMAT="%F %T "\nhistory | tail\n
+  557  history | grep "$(date +%F)" > todays_history.txt\n
+  558  script 1.log
+  559  script day3.log
+  560  vi sum.c\ngcc sum.c && ./a.out\nvi filecmd\ncat filecmd\ncat sum.c\ngcc sum.c\n./a.out\ngcc sum.c && ./a.out\nls\nmore filecmd\nnano filecmd\nmore filecmd\nless filecmd\nhead filecmd\nhead -n 5 filecmd\ntail filecmd\ntail +5 filecmd\nnano sample.txt\ncat sample.txt\ncut -c 1-3 sample.txt\ncut -c 4-10 sample.txt\ncat sample.txt\ncut -d ':' -f2 sample.txt\ncut -d ':' -f2,3 sample.txt\nls\ncat demo\nnano f1\nnano f2\ncat fi\ncat f1\ncat f2\npaste f1 f2\npaste -d ':' f1 f2\npaste -s f1 f2\ncat sample.txt\nsort sample.txt\nsort sample.txt -r\nsort -t ':' -k2 sample.txt\nsort -t ':' -k3 sample.txt\nsort -t ':' -k4 sample.txt\nsort -t ':' -k3 sample.txt -r\ncat sample.txt\ntr ':' '|' < sample.txt\ncat sample.txt\nls\ntr ':' '|' < sample.txt > s1.txt\nls\ncat s1.txt\ntr ':0' '|$' < sample.txt\ncat sample.txt\ntr -s '0' < sample.txt\ncat sample.txt\ntr -d '0' < sample.txt\nnano example.txt\ncat example.txt\nuniq example.txt\nnano example.txt\ncat example.txt\nuniq example.txt\nls\ncat sample.txt\ncat s1.txt\ncmp sample.txt s1.txt\ndiff sample.txt s1.txt\nls\nnano test.c\ncat test.c\ngrep main test.c\ngrep ^main test.c\ngrep ^int test.c\ngrep \; test.c\nnano test.c\ncat test.c\ngrep ^int test.c\nnano sed_test\ncat sed_test\nsed 's/Hello/Hi/' sed_test\ncat sed_test\nsed -i 's/Hello/Hi/' sed_test\ncat sed_test\nsed 's/!/$/g' sed_test\ncat sed_test\nsed '/simple/d' sed_test\nsed '/Hi/a Welcome to sed' sed_test\nsed -n '/Hi/p' sed_test\nnano employees.txt\ncat employees.txt\nawk '{print $0}' employees.txt\nawk '{print $1, $3}' employees.txt\nawk $3>50000 '{print $1, $3}' employees.txt\nawk '$3 > 50000 {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name:, Salary: "} {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name Salary"} {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name Age Salary"} {print $1, $2, $3}' employees.txt\nawk '{total+= $3} END {print "Total Salary=", total}' employees.txt\nawk '{print $0}' employees.txt\nawk '{print NR, $1}' employees.txt\nawk '{print NR, $0}' employees.txt\nawk '/Alice/' employees.txt\nawk '$2 < 30 {print $1, $2}' employees.txt\nawk '{printf "Name: %s, Age: %d, Salary: %d\n", $1, $2, $3}' employees.txt\nawk 'END {print "Total employees= ", NR}' employees.txt\nls -l\nls -l s1.txt\nchmod u+x s1.txt\nls -l s1.txt\nchmod o-r s1.txt\nls -l s1.txt\nchmod 462 s1.txt\nls -l s1.txt\nhistory\n
+  561  vi sum.c\ngcc sum.c && ./a.out\nvi filecmd\ncat filecmd\ncat sum.c\ngcc sum.c\n./a.out\ngcc sum.c && ./a.out\nls\nmore filecmd\nnano filecmd\nmore filecmd\nless filecmd\nhead filecmd\nhead -n 5 filecmd\ntail filecmd\ntail +5 filecmd\nnano sample.txt\ncat sample.txt\ncut -c 1-3 sample.txt\ncut -c 4-10 sample.txt\ncat sample.txt\ncut -d ':' -f2 sample.txt\ncut -d ':' -f2,3 sample.txt\nls\ncat demo\nnano f1\nnano f2\ncat fi\ncat f1\ncat f2\npaste f1 f2\npaste -d ':' f1 f2\npaste -s f1 f2\ncat sample.txt\nsort sample.txt\nsort sample.txt -r\nsort -t ':' -k2 sample.txt\nsort -t ':' -k3 sample.txt\nsort -t ':' -k4 sample.txt\nsort -t ':' -k3 sample.txt -r\ncat sample.txt\ntr ':' '|' < sample.txt\ncat sample.txt\nls\ntr ':' '|' < sample.txt > s1.txt\nls\ncat s1.txt\ntr ':0' '|$' < sample.txt\ncat sample.txt\ntr -s '0' < sample.txt\ncat sample.txt\ntr -d '0' < sample.txt\nnano example.txt\ncat example.txt\nuniq example.txt\nnano example.txt\ncat example.txt\nuniq example.txt\nls\ncat sample.txt\ncat s1.txt\ncmp sample.txt s1.txt\ndiff sample.txt s1.txt\nls\nnano test.c\ncat test.c\ngrep main test.c\ngrep ^main test.c\ngrep ^int test.c\ngrep \; test.c\nnano test.c\ncat test.c\ngrep ^int test.c\nnano sed_test\ncat sed_test\nsed 's/Hello/Hi/' sed_test\ncat sed_test\nsed -i 's/Hello/Hi/' sed_test\ncat sed_test\nsed 's/!/$/g' sed_test\ncat sed_test\nsed '/simple/d' sed_test\nsed '/Hi/a Welcome to sed' sed_test\nsed -n '/Hi/p' sed_test\nnano employees.txt\ncat employees.txt\nawk '{print $0}' employees.txt\nawk '{print $1, $3}' employees.txt\nawk $3>50000 '{print $1, $3}' employees.txt\nawk '$3 > 50000 {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name:, Salary: "} {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name Salary"} {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name Age Salary"} {print $1, $2, $3}' employees.txt\nawk '{total+= $3} END {print "Total Salary=", total}' employees.txt\nawk '{print $0}' employees.txt\nawk '{print NR, $1}' employees.txt\nawk '{print NR, $0}' employees.txt\nawk '/Alice/' employees.txt\nawk '$2 < 30 {print $1, $2}' employees.txt\nawk '{printf "Name: %s, Age: %d, Salary: %d\n", $1, $2, $3}' employees.txt\nawk 'END {print "Total employees= ", NR}' employees.txt\nls -l\nls -l s1.txt\nchmod u+x s1.txt\nls -l s1.txt\nchmod o-r s1.txt\nls -l s1.txt\nchmod 462 s1.txt\nls -l s1.txt\nhistory\n
+  562  vi sum.c\ngcc sum.c && ./a.out\nvi filecmd\ncat filecmd\ncat sum.c\ngcc sum.c\n./a.out\ngcc sum.c && ./a.out
+  563  fg
+  564  cat test.c
+  565  fg
+  566  cat test.c
+  567  gcc test.c && ./a.out\n
+  568  gcc test.c -o test && ./test\n
+  569  ls\nmore filecmd\nnano filecmd\nmore filecmd\nless filecmd\nhead filecmd\nhead -n 5 filecmd\ntail filecmd\ntail +5 filecmd\nnano sample.txt\ncat sample.txt\ncut -c 1-3 sample.txt\ncut -c 4-10 sample.txt\ncat sample.txt\ncut -d ':' -f2 sample.txt\ncut -d ':' -f2,3 sample.txt
+  570  ls\ncat demo\nnano f1\nnano f2\ncat fi\ncat f1\ncat f2\npaste f1 f2\npaste -d ':' f1 f2\npaste -s f1 f2\ncat sample.txt\nsort sample.txt\nsort sample.txt -r\nsort -t ':' -k2 sample.txt\nsort -t ':' -k3 sample.txt\nsort -t ':' -k4 sample.txt\nsort -t ':' -k3 sample.txt -r\ncat sample.txt\ntr ':' '|' < sample.txt\ncat sample.txt
+  571  tr ':' '|' < sample.txt > s1.txt\nls\ncat s1.txt\ntr ':0' '|$' < sample.txt\ncat sample.txt\ntr -s '0' < sample.txt\ncat sample.txt\ntr -d '0' < sample.txt\nnano example.txt\ncat example.txt\nuniq example.txt\nnano example.txt\ncat example.txt\nuniq example.txt
+  572  \ncat sample.txt\ncat s1.txt\ncmp sample.txt s1.txt\ndiff sample.txt s1.txt\nls\nnano test.c\ncat test.c\ngrep main test.c\ngrep ^main test.c\ngrep ^int test.c\ngrep \; test.c\nnano test.c\ncat test.c\ngrep ^int test.c\nnano sed_test\ncat sed_test\nsed 's/Hello/Hi/' sed_test\ncat sed_test\nsed -i 's/Hello/Hi/' sed_test\ncat sed_test\nsed 's/!/$/g' sed_test\ncat sed_test\nsed '/simple/d' sed_test\nsed '/Hi/a Welcome to sed' sed_test\nsed -n '/Hi/p' sed_test\nnano employees.txt\ncat employees.txt\nawk '{print $0}' employees.txt\nawk '{print $1, $3}' employees.txt\nawk $3>50000 '{print $1, $3}' employees.txt\nawk '$3 > 50000 {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name:, Salary: "} {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name Salary"} {print $1, $3}' employees.txt\nawk 'BEGIN {print "Name Age Salary"} {print $1, $2, $3}' employees.txt\nawk '{total+= $3} END {print "Total Salary=", total}' employees.txt\nawk '{print $0}' employees.txt\nawk '{print NR, $1}' employees.txt\nawk '{print NR, $0}' employees.txt\nawk '/Alice/' employees.txt\nawk '$2 < 30 {print $1, $2}' employees.txt\nawk '{printf "Name: %s, Age: %d, Salary: %d\n", $1, $2, $3}' employees.txt\nawk 'END {print "Total employees= ", NR}' employees.txt\nls -l\nls -l s1.txt\nchmod u+x s1.txt\nls -l s1.txt\nchmod o-r s1.txt\nls -l s1.txt\nchmod 462 s1.txt\nls -l s1.txt
+
